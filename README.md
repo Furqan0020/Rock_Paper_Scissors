@@ -4,33 +4,40 @@ Overview
 
 This is a simple Rock, Paper, Scissors game implemented in JavaScript. The game allows the user to play against the computer by selecting one of the three options: Rock, Paper, or Scissors. The computer randomly selects its choice, and the game determines the winner based on the classic rules of the game.
 
-Features
+<b>Features</b>
+<ul>
+  <li>User-friendly interface.</li>
 
-User-friendly interface.
+  <li>Randomized computer choices.</li>
+  
+  
+  <li>Real-time result display.</li>
+  
+  <li>Score tracking for both the player and the computer.</li>
 
-Randomized computer choices.
+  
+</ul>
+<b>Rules</b>
+<ul>
+  <li>Rock beats Scissors.</li>
 
-Real-time result display.
+  <li>Scissors beat Paper.</li>
 
-Score tracking for both the player and the computer.
+  <li>Paper beats Rock.</li>
 
-Rules
+</ul>
 
-Rock beats Scissors.
+<b><u>If both the player and the computer choose the same option, it is a tie.</u></b>
 
-Scissors beat Paper.
+<b>Technologies Used</b>
+<ol>
+  <li>HTML</li>
 
-Paper beats Rock.
+  <li>CSS</li>
 
-If both the player and the computer choose the same option, it is a tie.
+  <li>JavaScript  </li>
+</ol>
 
-Technologies Used
-
-HTML
-
-CSS
-
-JavaScript
 
 How to Run
 
