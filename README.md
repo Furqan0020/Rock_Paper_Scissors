@@ -59,4 +59,6 @@ The game will display the result of the round (Win, Lose, or Tie).
 The score will be updated after each round.
 
 <b>Thanks</b>
-Follow Me On my LinkDin <a href="www.linkedin.com/in/furqanazeem">Furqan Azeem </a>
+<hr/>
+<b>Follow Me On my LinkDin</b> : [My LinkedIn Profile](https://www.linkedin.com/in/furqanazeem)
+
