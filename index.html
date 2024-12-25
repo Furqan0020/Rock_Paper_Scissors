@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock paper sessiors</title>
+</head>
+<body>
+    <h1>Rock , Paper , Sessiors</h1>
+    <div class="content">
+        <img onclick="userChoice('Rock')" src="https://cdn.icon-icons.com/icons2/390/PNG/512/rock_39413.png" alt="">
+        <img onclick="userChoice('Paper')" src="https://media.geeksforgeeks.org/wp-content/uploads/20210705223645/paper.jpeg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png" alt="" onclick="userChoice('Scissors')">
+    
+    </div>
+    <p id="result"></p>
+    <p id="score_display">
+        
+    </p>
+    <button class="reset_btn" onclick="resetButton()">Reset Score</button>
+    
+    <script src="logic.js"></script>
+</body>
+</html>
