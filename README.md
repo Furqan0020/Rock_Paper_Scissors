@@ -14,6 +14,8 @@ This is a simple Rock, Paper, Scissors game implemented in JavaScript. The game 
   <li>Real-time result display.</li>
   
   <li>Score tracking for both the player and the computer.</li>
+  
+  <li>You can autoplay this game.</li>
 
   
 </ul>
