@@ -53,3 +53,14 @@ img{
     bottom: 0;
     right: 0;
 }
+.auto_play{
+    padding: 10px 15px;
+    border: 1px sold white;
+    color : white;
+    background-color: rgb(223, 46, 46);
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 250px;
+}

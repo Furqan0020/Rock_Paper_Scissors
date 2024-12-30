@@ -116,3 +116,18 @@ let resetButton = () =>{
 
 }
 updateSocre()
+let isAutoPlaying = false
+let intervalId;
+let autoPlay = () =>{
+    if(!isAutoPlaying){
+        const playerMove = computerChoice()
+        intervalId=setInterval(function(){
+            userChoice(playerMove)
+        },1000)
+        isAutoPlaying = true
+    }else{
+        clearInterval(intervalId)
+        isAutoPlaying = false
+    }
+    
+}
