@@ -4,22 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rock paper sessiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>Rock , Paper , Sessiors</h1>
-    <div class="content">
-        <img onclick="userChoice('Rock')" src="https://cdn.icon-icons.com/icons2/390/PNG/512/rock_39413.png" alt="">
-        <img onclick="userChoice('Paper')" src="https://media.geeksforgeeks.org/wp-content/uploads/20210705223645/paper.jpeg" alt="">
-        <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_1280.png" alt="" onclick="userChoice('Scissors')">
-    
+    <div class="theme-toggle">
+        <button id="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
     </div>
-    <p id="result"></p>
-    <p id="score_display">
+    
+    <h1>🎮 Rock Paper Scissors</h1>
+    
+    <div class="game-container">
+        <div class="score-board">
+            <div class="score-card wins">
+                <div class="score-icon">🏆</div>
+                <div class="score-label">Wins</div>
+                <div class="score-value" id="wins">0</div>
+            </div>
+            <div class="score-card losses">
+                <div class="score-icon">😔</div>
+                <div class="score-label">Losses</div>
+                <div class="score-value" id="losses">0</div>
+            </div>
+            <div class="score-card ties">
+                <div class="score-icon">🤝</div>
+                <div class="score-label">Ties</div>
+                <div class="score-value" id="ties">0</div>
+            </div>
+        </div>
         
-    </p>
-    <button class="reset_btn" onclick="resetButton()">Reset Score</button>
-    <button class="auto_play" onclick="autoPlay()">AutoPlay</button>
+        <div class="win-percentage">
+            Win Rate: <span id="win-rate">0%</span>
+        </div>
+        
+        <div class="content">
+            <div class="choice-card" onclick="userChoice('Rock')">
+                <img src="images/Rock.png" alt="Rock">
+                <div class="choice-label">Rock</div>
+            </div>
+            <div class="choice-card" onclick="userChoice('Paper')">
+                <img src="images/Paper.png" alt="Paper">
+                <div class="choice-label">Paper</div>
+            </div>
+            <div class="choice-card" onclick="userChoice('Scissors')">
+                <img src="images/Scissors.png" alt="Scissors">
+                <div class="choice-label">Scissors</div>
+            </div>
+        </div>
+        
+        <div class="result-container" id="result-container">
+            <p id="result">Choose your weapon!</p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-reset" onclick="resetButton()">
+                🔄 Reset All
+            </button>
+            <button class="btn btn-auto" id="auto-btn" onclick="autoPlay()">
+                ▶️ Auto Play
+            </button>
+            <button class="btn btn-history" onclick="toggleHistory()">
+                📜 History
+            </button>
+            <button class="btn btn-stats" onclick="showStats()">
+                📊 Stats
+            </button>
+        </div>
+        
+        <div class="autoplay-controls" id="autoplay-controls" style="display: none;">
+            <label>Speed:</label>
+            <input type="range" id="speed-slider" min="500" max="3000" value="1000" step="500">
+            <span id="speed-value">1s</span>
+        </div>
+    </div>
+    
+    <div class="history-panel" id="history-panel">
+        <div class="history-header">
+            <h3>Game History</h3>
+            <button onclick="toggleHistory()">✕</button>
+        </div>
+        <div class="history-list" id="history-list">
+            <p class="no-history">No games played yet</p>
+        </div>
+        <button class="btn btn-clear" onclick="clearHistory()">Clear History</button>
+    </div>
+    
+    <div class="modal" id="stats-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📊 Game Statistics</h3>
+                <button onclick="closeStats()">✕</button>
+            </div>
+            <div class="stats-body">
+                <div class="stat-row">
+                    <span>Total Games:</span>
+                    <span id="total-games">0</span>
+                </div>
+                <div class="stat-row">
+                    <span>Win Rate:</span>
+                    <span id="stat-win-rate">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span>Loss Rate:</span>
+                    <span id="stat-loss-rate">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span>Tie Rate:</span>
+                    <span id="stat-tie-rate">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span>Most Used Move:</span>
+                    <span id="most-used-move">-</span>
+                </div>
+                <div class="stat-row">
+                    <span>Best Streak:</span>
+                    <span id="best-streak">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script src="logic.js"></script>
 </body>
